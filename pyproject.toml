@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "getmywork"
+version = "0.1.0"
+description = "A TUI tool for managing GitHub repositories"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "User"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "textual>=0.47.0",
+]
+
+[project.scripts]
+getmywork = "getmywork.main:main"
+
+[project.urls]
+Homepage = "https://github.com/user/getmywork"
+
+[tool.hatch.build.targets.wheel]
+packages = ["getmywork"]
